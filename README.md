@@ -187,7 +187,7 @@ pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost
 **Pritam**
 IT Professional
 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/pr1994
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/pr1994)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/pritambiswas-wcc/)
 
 ---
