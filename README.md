@@ -204,5 +204,3 @@ IT Professional (10 years Oracle WebCenter Content) → Transitioning to AI/ML
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/pritambiswas-wcc/)
 
 ---
-
-*This project is part of a structured AI/ML learning portfolio built during the Scaler Academy program.*
