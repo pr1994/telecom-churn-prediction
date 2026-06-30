@@ -7,7 +7,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-yellow?style=flat-square&logo=googlecolab)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=flat-square&logo=streamlit)](https://telecom-churn-prediction-appl.streamlit.app/)
 
-> **End-to-end machine learning project** predicting which telecom customers are likely to churn — covering EDA, preprocessing, model building, and evaluation.
+> **End-to-end machine learning project** predicting which telecom customers are likely to churn — covering EDA, preprocessing, model building, evaluation, and live deployment.
 
 ---
 
@@ -64,17 +64,20 @@ Customer churn is one of the most costly challenges in the telecom industry. Acq
 telecom-churn-prediction/
 │
 ├── telecom_churn_analysis.ipynb   # Main Colab notebook (full pipeline)
-├── README.md                      # Project documentation
-└── data/
-    ├── churn-bigml-80.csv         # Training set
-    └── churn-bigml-20.csv         # Test set
+├── app.py                         # Streamlit web application
+├── rf_model.pkl                   # Trained Random Forest model
+├── scaler.pkl                     # Fitted StandardScaler
+├── requirements.txt               # Deployment dependencies
+├── data/churn-bigml-80.csv             # Training set
+├── data/churn-bigml-20.csv             # Test set
+└── README.md                      # Project documentation
 ```
 
 ---
 
 ## 🔬 Methodology
 
-The project follows a structured 5-phase ML pipeline:
+The project follows a structured 6-phase ML pipeline:
 
 ```
 Phase 1 → Exploratory Data Analysis (EDA)
@@ -82,6 +85,7 @@ Phase 2 → Data Preprocessing
 Phase 3 → Model Building
 Phase 4 → Model Evaluation
 Phase 5 → Feature Importance & Business Insights
+Phase 6 → Deployment (Streamlit Cloud)
 ```
 
 ---
@@ -101,7 +105,7 @@ Four pairs of highly correlated features were identified and resolved:
 | Total Night Minutes ↔ Total Night Charge | Dropped charge column |
 | Total Intl Minutes ↔ Total Intl Charge | Dropped charge column |
 
-> Charge columns are mathematically derived from minutes (Charge = Minutes × Rate), making them redundant.
+> Charge columns are mathematically derived from minutes (Charge = Minutes × Rate), making them redundant. Keeping both would introduce multicollinearity and mislead the model.
 
 ### 3. Strong Churn Signals Identified
 
@@ -145,7 +149,7 @@ Random Forest was selected as the final model based on:
 5. Account Length            ██████
 ```
 
-These match exactly with what EDA identified manually — validating the analytical approach.
+> These match exactly with what EDA identified manually — confirming the model learned genuine patterns, not noise.
 
 ---
 
@@ -162,35 +166,43 @@ These match exactly with what EDA identified manually — validating the analyti
 
 ## ▶️ How to Run
 
+### Option 1 — Live Demo (No setup needed)
+👉 [Launch the app directly](https://telecom-churn-prediction-appl.streamlit.app/)
+
+### Option 2 — Run Locally
+```bash
+git clone https://github.com/pr1994/telecom-churn-prediction.git
+cd telecom-churn-prediction
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+### Option 3 — Explore the Notebook
 1. Open [Google Colab](https://colab.research.google.com/)
 2. Upload `telecom_churn_analysis.ipynb`
 3. Upload both CSV files to the Colab session (`/content/`)
 4. Run all cells top to bottom (`Runtime → Run All`)
-
-**Dependencies** (auto-installed in notebook):
-```
-pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost
-```
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Language:** Python 3.10+
-- **Environment:** Google Colab
+- **Environment:** Google Colab + Local
 - **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost
 - **Models:** Logistic Regression, Random Forest, XGBoost
+- **Deployment:** Streamlit Cloud
 
 ---
 
 ## 👤 Author
 
 **Pritam**
-IT Professional
+IT Professional (10 years Oracle WebCenter Content) → Transitioning to AI/ML
 
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/pr1994)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/pritambiswas-wcc/)
 
 ---
 
-
+*This project is part of a structured AI/ML learning portfolio built during the Scaler Academy program.*
