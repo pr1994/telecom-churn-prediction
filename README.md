@@ -5,6 +5,7 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Latest-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-yellow?style=flat-square&logo=googlecolab)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=flat-square&logo=streamlit)](https://telecom-churn-prediction-appl.streamlit.app/)
 
 > **End-to-end machine learning project** predicting which telecom customers are likely to churn — covering EDA, preprocessing, model building, and evaluation.
 
